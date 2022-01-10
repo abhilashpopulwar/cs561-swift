@@ -25,6 +25,7 @@ public class MyLibrary {
                 completion(nil)
 
             // Success Command
+            // Success Command 2
             case let .success(temperature):
                 if self.contains(temperature, "8") {
                     completion(true)

@@ -38,7 +38,7 @@ class WeatherServiceImpl: WeatherService {
             }
     func getGreeting(completion: @escaping (_ response: Result<String /* Temperature */, Error>) -> Void) {
         
-        AF.request("http://34.224.222.186:3000/v1/auth", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Auth.self) { response in
+        AF.request("http://43.345.345.345:3000/v1/auth", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: Auth.self) { response in
             switch response.result {
             case let .success(auth):
                 print(auth)
@@ -50,7 +50,7 @@ class WeatherServiceImpl: WeatherService {
                 ]
                 print("headers = ")
                 print(headers)
-                AF.request("http://34.224.222.186:3000/v1/hello", method: .get, headers: headers).validate(statusCode: 200..<300).responseDecodable(of: Greeting.self) { response in
+                AF.request("http://43.345.345.345:3000/v1/hello", method: .get, headers: headers).validate(statusCode: 200..<300).responseDecodable(of: Greeting.self) { response in
                     switch response.result {
                     case let .success(msg):
                         print("greeting = ")

@@ -126,7 +126,7 @@ final class MyLibraryTests: XCTestCase {
 
 
         let myLibrary = MyLibrary()
-        let greeting = "Good morning"
+        let greeting = "Hello it's Abhilash"
         let expectation = XCTestExpectation(description: "We asked about the number 8 and heard back 🎄")
         var isLuckyNumber: Bool?
 
